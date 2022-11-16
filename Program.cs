@@ -9,15 +9,8 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        Console.WriteLine("Hello, MySQL!");
-
-        
-        MySQLHandler mySQLHandler = new MySQLHandler();
-
         Menu menu = new Menu();
-
         menu.NavigationMenu();
-       
-        
+    
     }
 }

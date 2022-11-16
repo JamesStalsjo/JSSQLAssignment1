@@ -16,17 +16,6 @@ namespace JSSQLAssignment1
         string connString = File.ReadAllText("C:\\Users\\james\\Desktop\\Campus Mölndal\\2 - ATK\\ConnectionString.txt");
         string sql = File.ReadAllText("C:\\Users\\james\\Desktop\\Campus Mölndal\\2 - ATK\\JSSQLAssignment1.sql");
 
-        public void Connect()
-        {
-            
-            MySqlConnection conn = new MySqlConnection(connString);
-            conn.Open();
-            MySqlCommand cmd = new MySqlCommand(sql,conn);
-            cmd.ExecuteNonQuery();
-            conn.Close();
-        
-        }
-
         public void CreateTable()
         {
             MySqlConnection conn = new MySqlConnection(connString);
@@ -153,7 +142,6 @@ namespace JSSQLAssignment1
            
             while (reader.Read())
             {
-                
                 Console.WriteLine(reader.GetString("last_name") + ".");
             }
 
