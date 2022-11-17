@@ -50,7 +50,7 @@ namespace JSSQLAssignment1
 
             while (reader.Read())
             {
-                Console.WriteLine("The number of unique countries represented is: " + reader.GetInt32("COUNT(DISTINCT(country))") + ".");
+                Console.WriteLine("\nThe number of unique countries represented is: " + reader.GetInt32("COUNT(DISTINCT(country))") + ".");
             }
             
             return null;
@@ -68,7 +68,7 @@ namespace JSSQLAssignment1
 
             while (reader.Read())
             {
-                Console.WriteLine("The most common country is: " + reader.GetString("country") + ", which occurs " + reader.GetInt32("COUNT(country)") + " times.");
+                Console.WriteLine("\nThe most common country is: " + reader.GetString("country") + ", which occurs " + reader.GetInt32("COUNT(country)") + " times.");
                 
             }
 
@@ -87,7 +87,7 @@ namespace JSSQLAssignment1
 
             while (reader.Read())
             {
-                Console.WriteLine("The number of unique usernames is: " + reader.GetString("COUNT(DISTINCT(username))") + "\nThe number of unique passwords is: " + reader.GetString("COUNT(DISTINCT(password))") + ".");
+                Console.WriteLine("\nThe number of unique usernames is: " + reader.GetString("COUNT(DISTINCT(username))") + "\nThe number of unique passwords is: " + reader.GetString("COUNT(DISTINCT(password))") + ".");
             }
 
             return null;
@@ -104,7 +104,7 @@ namespace JSSQLAssignment1
 
             while (reader.Read())
             {
-                Console.WriteLine("The number of people from the Nordic countries are: " + reader.GetInt32("COUNT(id)") + ".");
+                Console.WriteLine("\nThe number of people from the Nordic countries are: " + reader.GetInt32("COUNT(id)") + ".");
             }
             
             return null;
@@ -122,7 +122,7 @@ namespace JSSQLAssignment1
             
             while (reader.Read())
             {
-                Console.WriteLine("The number of people from Scandinavia are: " + reader.GetInt32("COUNT(id)") + ".");
+                Console.WriteLine("\nThe number of people from Scandinavia are: " + reader.GetInt32("COUNT(id)") + ".");
             }
 
             return null;
