@@ -135,14 +135,19 @@ namespace JSSQLAssignment1
             MySqlConnection conn = new MySqlConnection(connString);
             conn.Open();
 
+            Console.ForegroundColor = ConsoleColor.Yellow;
             string input = Console.ReadLine().ToUpper();
+            Console.WriteLine("\n");
+            Console.ResetColor();
                                     
             MySqlCommand cmd = new MySqlCommand($"SELECT last_name FROM JSSQLAssignment1 WHERE last_name LIKE ('{input}%') ORDER BY last_name LIMIT 0, 10", conn);
             MySqlDataReader reader = cmd.ExecuteReader();
            
             while (reader.Read())
             {
+                Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine(reader.GetString("last_name") + ".");
+                Console.ResetColor();
             }
 
             return null;
@@ -154,14 +159,18 @@ namespace JSSQLAssignment1
             MySqlConnection conn = new MySqlConnection(connString);
             conn.Open();
 
+            Console.ForegroundColor = ConsoleColor.Yellow;
             string input = Console.ReadLine().ToUpper();
+            Console.ResetColor();
 
             MySqlCommand cmd = new MySqlCommand($"SELECT first_name, last_name FROM JSSQLAssignment1 WHERE first_name LIKE ('{input}%') AND last_name LIKE ('{input}%')", conn);
             MySqlDataReader reader = cmd.ExecuteReader();
 
             while (reader.Read())
             {
+                Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine(reader.GetString("first_name") + " " + reader.GetString("last_name") + ".");
+                Console.ResetColor();
             }
 
             return null;
